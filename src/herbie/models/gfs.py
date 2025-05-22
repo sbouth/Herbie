@@ -59,15 +59,16 @@ class gfs:
 
             if self.product == "sfluxgrb":
                 post_root = post_root.replace("sfluxgrb.", "sfluxgrb")
+                post_root += ".grib2" 
 
             self.SOURCES = {
                 "aws": f"https://noaa-gfs-bdp-pds.s3.amazonaws.com/{post_root}",
                 "nomads": f"https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/{post_root}",
                 "google": f"https://storage.googleapis.com/global-forecast-system/{post_root}",
                 "azure": f"https://noaagfs.blob.core.windows.net/gfs/{post_root}",
-                "ncar_rda": f"https://data.rda.ucar.edu/d084001/{self.date:%Y/%Y%m%d}/gfs.0p25.{self.date:%Y%m%d%H}.f{self.fxx:03d}.grib2",
+                # "ncar_rda": f"https://data.rda.ucar.edu/d084001/{self.date:%Y/%Y%m%d}/gfs.0p25.{self.date:%Y%m%d%H}.f{self.fxx:03d}.grib2",
             }
-            self.IDX_SUFFIX = [".idx", ".grb2.inv"]
+            self.IDX_SUFFIX = [".idx", ".grib2.idx", ".grb2.inv"]
         else:
             self.PRODUCTS = {
                 "0.5-degree": "0.5 degree grid",
