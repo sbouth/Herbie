@@ -67,9 +67,9 @@ class ifs:
             "google": f"https://storage.googleapis.com/ecmwf-open-data/{post_root}",
             "aws": f"https://ecmwf-forecasts.s3.eu-central-1.amazonaws.com/{post_root}",
             "ecmwf": f"https://data.ecmwf.int/forecasts/{post_root}",
-            "azure": f"https://ai4edataeuwest.blob.core.windows.net/ecmwf/{post_root}",
-            "azure-scda": f"https://ai4edataeuwest.blob.core.windows.net/ecmwf/{post_root.replace('oper', 'scda')}",
-            "azure-waef": f"https://ai4edataeuwest.blob.core.windows.net/ecmwf/{post_root.replace('wave', 'waef')}",
+            # "azure": f"https://ai4edataeuwest.blob.core.windows.net/ecmwf/{post_root}",
+            # "azure-scda": f"https://ai4edataeuwest.blob.core.windows.net/ecmwf/{post_root.replace('oper', 'scda')}",
+            # "azure-waef": f"https://ai4edataeuwest.blob.core.windows.net/ecmwf/{post_root.replace('wave', 'waef')}",
         }
         self.IDX_SUFFIX = [".index"]
         self.IDX_STYLE = "eccodes"  # 'wgrib2' or 'eccodes'
